@@ -1,0 +1,28 @@
+<div class="row" *ngIf="recipes && recipes.vegetarian">
+  <h3>Vegetarian</h3>
+  <div class="col-sm-6 col-md-3" *ngFor="let vegAppetizers of recipes.vegetarian">
+    <div class="thumbnail">
+      <img src="{{vegAppetizers.image}}" alt="...">
+      <div class="caption">
+        <h3>{{vegAppetizers.recipe_name}}</h3>
+      </div>
+    </div>
+  </div>
+	
+	
+
+</div>
+
+
+<div class="row" *ngIf="recipes && recipes.nonvegetarian">
+  <h3>Non Vegetarian</h3>
+  <div class="col-sm-6 col-md-3" *ngFor="let nonvegAppetizers of recipes.nonvegetarian">
+    <div class="thumbnail">
+      <img src="{{nonvegAppetizers.image}}" alt="...">
+      <div class="caption">
+        <h3>{{nonvegAppetizers.recipe_name}}</h3>
+      </div>
+    </div>
+  </div>
+
+</div>
