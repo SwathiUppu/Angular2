@@ -29,6 +29,7 @@ const recipe_list_component_1 = require('./recipes-home/recipe-list.component');
 const appetizer_recipes_component_1 = require('./recipes/appetizer-recipes.component');
 const entree_recipes_component_1 = require('./recipes/entree-recipes.component');
 const desert_recipes_component_1 = require('./recipes/desert-recipes.component');
+const selected_recipe_component_1 = require('./recipes/selected-recipe.component');
 let AppModule = class AppModule {
 };
 AppModule = __decorate([
@@ -44,10 +45,11 @@ AppModule = __decorate([
                 { path: 'appetizers', component: appetizer_recipes_component_1.AppetizerComponent },
                 { path: 'deserts', component: desert_recipes_component_1.DesertComponent },
                 { path: 'entree', component: entree_recipes_component_1.EntreeComponent },
+                { path: 'selectedRecipe/:recipeType/:recipeName', component: selected_recipe_component_1.SelectedRecipeComponent },
                 { path: '', redirectTo: 'welcome', pathMatch: 'full' },
                 { path: '**', redirectTo: 'welcome', pathMatch: 'full' }
             ], { useHash: false })],
-        declarations: [app_component_1.AppComponent, product_list_component_1.ProductListComponent, product_filter_pipe_1.ProductFilterPipe, star_component_1.StarComponent, welcome_component_1.WelcomeComponent, product_details_component_1.ProductDetailComponent, login_component_1.LoginComponent, registration_component_1.RegistrationComponent, recipe_home_component_1.RecipeComponent, carousel_1.CarouselComponent, recipe_list_component_1.RecipeListComponent, appetizer_recipes_component_1.AppetizerComponent, entree_recipes_component_1.EntreeComponent, desert_recipes_component_1.DesertComponent],
+        declarations: [app_component_1.AppComponent, product_list_component_1.ProductListComponent, product_filter_pipe_1.ProductFilterPipe, star_component_1.StarComponent, welcome_component_1.WelcomeComponent, product_details_component_1.ProductDetailComponent, login_component_1.LoginComponent, registration_component_1.RegistrationComponent, recipe_home_component_1.RecipeComponent, carousel_1.CarouselComponent, recipe_list_component_1.RecipeListComponent, appetizer_recipes_component_1.AppetizerComponent, entree_recipes_component_1.EntreeComponent, desert_recipes_component_1.DesertComponent, selected_recipe_component_1.SelectedRecipeComponent],
         providers: [product_guard_service_1.ProductDetailGuard, recipe_services_1.RecipeService],
         bootstrap: [app_component_1.AppComponent]
     }), 

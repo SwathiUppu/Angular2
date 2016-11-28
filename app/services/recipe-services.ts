@@ -7,24 +7,30 @@ import 'rxjs/add/operator/catch';
 
 @Injectable()
 export class RecipeService {
+	private _recipeUrl: string;
+  constructor(private _http: Http) {}
 	
-	private _recipeUrl = 'api/products/appetizers.json';
-	constructor(private _http: Http) {
-		
-	}
-  getRecipes(): Observable<any []>  {
-		return this._http.get(this._recipeUrl)
-                         .map((res:Response) => res.json())
-								.do(data => console.log(JSON.stringify(data)))
-								.catch(this.errorHandler);
+  getRecipes(recipeType: string): Observable<any []>  {
+    this._recipeUrl = 'api/products/' + recipeType +'.json';
+    return this._http.get(this._recipeUrl)
+               .map((res:Response) => res.json())
+               .do(data => console.log(JSON.stringify(data)))
+               .catch(this.errorHandler);
   }
 	
-	private errorHandler(error: Response) {
-		console.log(error);
-		return Observable.throw(error.json().error || 'Server Error');
+	getSelectedRecipe(recipeType: string, recipeName: string) : Observable<any []> {
+		this._recipeUrl = 'api/appetizers/'+recipeType+'_'+recipeName+'.json';
+		return this._http.get(this._recipeUrl)
+		           .map((res:Response) => res.json())
+							 .do(data => console.log(JSON.stringify(data)))
+							 .catch(this.errorHandler);
 	}
+
+  private errorHandler(error: Response) {
+    return Observable.throw(error.json().error || 'Server Error');
+  }
 }
 
 
-                         
-                         
+
+

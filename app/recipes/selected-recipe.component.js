@@ -10,20 +10,25 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 const core_1 = require('@angular/core');
 const recipe_services_1 = require('../services/recipe-services');
-let DesertComponent = class DesertComponent {
-    constructor(_recipeService) {
+const router_1 = require('@angular/router');
+let SelectedRecipeComponent = class SelectedRecipeComponent {
+    constructor(_route, _recipeService) {
+        this._route = _route;
         this._recipeService = _recipeService;
     }
     ngOnInit() {
-        this._recipeService.getRecipes('deserts')
-            .subscribe(data => this.recipes = data);
+        let recipeType = this._route.snapshot.params['recipeType'];
+        let recipeName = this._route.snapshot.params['recipeName'];
+        this._recipeService.getSelectedRecipe(recipeType, recipeName)
+            .subscribe(data => this.selectedRecipe = data);
     }
 };
-DesertComponent = __decorate([
+SelectedRecipeComponent = __decorate([
     core_1.Component({
-        templateUrl: 'app/recipes/desert-recipes.component.html'
+        templateUrl: 'app/recipes/selected-recipe.component.html',
+        styleUrls: ['app/recipes/recipes.css']
     }), 
-    __metadata('design:paramtypes', [recipe_services_1.RecipeService])
-], DesertComponent);
-exports.DesertComponent = DesertComponent;
-//# sourceMappingURL=desert-recipes.component.js.map
+    __metadata('design:paramtypes', [router_1.ActivatedRoute, recipe_services_1.RecipeService])
+], SelectedRecipeComponent);
+exports.SelectedRecipeComponent = SelectedRecipeComponent;
+//# sourceMappingURL=selected-recipe.component.js.map

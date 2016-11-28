@@ -9,13 +9,21 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 const core_1 = require('@angular/core');
+const recipe_services_1 = require('../services/recipe-services');
 let EntreeComponent = class EntreeComponent {
+    constructor(_recipeService) {
+        this._recipeService = _recipeService;
+    }
+    ngOnInit() {
+        this._recipeService.getRecipes('entree')
+            .subscribe(data => this.recipes = data);
+    }
 };
 EntreeComponent = __decorate([
     core_1.Component({
         templateUrl: 'app/recipes/entree-recipes.component.html'
     }), 
-    __metadata('design:paramtypes', [])
+    __metadata('design:paramtypes', [recipe_services_1.RecipeService])
 ], EntreeComponent);
 exports.EntreeComponent = EntreeComponent;
 //# sourceMappingURL=entree-recipes.component.js.map

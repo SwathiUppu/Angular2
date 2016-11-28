@@ -1,40 +1,29 @@
 {
     "vegetarian": [
         {
-            "image":"http://www.angulartypescript.com/wp-content/uploads/2016/03/car1.jpg",
-            "recipe_name": "recipeName"
+            "image":"api/images/Bruschetta.jpg",
+            "recipe_name": "Bruschetta",
+						"recipe_alias": "Bruschetta"
         },
         {
-            "image":"http://www.angulartypescript.com/wp-content/uploads/2016/03/car1.jpg",
-            "recipe_name": "recipeName1"
+            "image":"api/images/chickpeas.jpg",
+            "recipe_name": "Indian-Spiced Roasted Chickpeas",
+						"recipe_alias": "RoastedChickpeas"
         },
         {
-            "image":"http://www.angulartypescript.com/wp-content/uploads/2016/03/car1.jpg",
-            "recipe_name": "recipeName2"
+            "image":"api/images/deviled_eggs.jpg",
+            "recipe_name": "Cheddar Deviled Eggs",
+						"recipe_alias": "DeviledEggs"
         },
         {
-            "image":"http://www.angulartypescript.com/wp-content/uploads/2016/03/car1.jpg",
-            "recipe_name": "recipeName3"
+            "image":"api/images/bufallo_chicken.jpg",
+            "recipe_name": "Buffalo Chicken Wings",
+						"recipe_alias": "BufalloChicken"
         },
         {
-            "image":"http://www.angulartypescript.com/wp-content/uploads/2016/03/car1.jpg",
-            "recipe_name": "recipeName4"
-        },
-        {
-            "image":"http://www.angulartypescript.com/wp-content/uploads/2016/03/car1.jpg",
-            "recipe_name": "recipeName5"
-        },
-        {
-            "image":"http://www.angulartypescript.com/wp-content/uploads/2016/03/car1.jpg",
-            "recipe_name": "recipeName6"
-        },
-        {
-            "image":"http://www.angulartypescript.com/wp-content/uploads/2016/03/car1.jpg",
-            "recipe_name": "recipeName7"
-        },
-        {
-            "image":"http://www.angulartypescript.com/wp-content/uploads/2016/03/car1.jpg",
-            "recipe_name": "recipeName8"
+            "image":"api/images/egg_rolls.jpg",
+            "recipe_name": "Southwestern Egg Rolls",
+						"recipe_alias": "EggRolls"
         }
     ],
     "nonvegetarian": [
@@ -57,22 +46,6 @@
         {
             "image":"http://www.angulartypescript.com/wp-content/uploads/2016/03/car1.jpg",
             "recipe_name": "nonrecipeName4"
-        },
-        {
-            "image":"http://www.angulartypescript.com/wp-content/uploads/2016/03/car1.jpg",
-            "recipe_name": "nonrecipeName5"
-        },
-        {
-            "image":"http://www.angulartypescript.com/wp-content/uploads/2016/03/car1.jpg",
-            "recipe_name": "nonrecipeName6"
-        },
-        {
-            "image":"http://www.angulartypescript.com/wp-content/uploads/2016/03/car1.jpg",
-            "recipe_name": "nonrecipeName7"
-        },
-        {
-            "image":"http://www.angulartypescript.com/wp-content/uploads/2016/03/car1.jpg",
-            "recipe_name": "nonrecipeName8"
         }
     ]
 }

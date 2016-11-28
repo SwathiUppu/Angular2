@@ -21,6 +21,7 @@ import { RecipeListComponent } from './recipes-home/recipe-list.component';
 import { AppetizerComponent } from './recipes/appetizer-recipes.component';
 import { EntreeComponent } from './recipes/entree-recipes.component';
 import { DesertComponent } from './recipes/desert-recipes.component';
+import { SelectedRecipeComponent } from './recipes/selected-recipe.component';
 
 @NgModule({
   imports: [ BrowserModule, FormsModule, HttpModule, RouterModule.forRoot([
@@ -34,10 +35,11 @@ import { DesertComponent } from './recipes/desert-recipes.component';
 	{ path: 'appetizers', component: AppetizerComponent },
 	{ path: 'deserts', component: DesertComponent },
 	{ path: 'entree', component: EntreeComponent },
+	{ path: 'selectedRecipe/:recipeType/:recipeName', component: SelectedRecipeComponent },
 	{ path: '', redirectTo: 'welcome', pathMatch: 'full' },
 	{ path:'**', redirectTo: 'welcome', pathMatch: 'full' }
 	], { useHash: false }) ],
-  declarations: [ AppComponent, ProductListComponent, ProductFilterPipe, StarComponent, WelcomeComponent, ProductDetailComponent, LoginComponent, RegistrationComponent, RecipeComponent, CarouselComponent, RecipeListComponent, AppetizerComponent, EntreeComponent, DesertComponent ],
+  declarations: [ AppComponent, ProductListComponent, ProductFilterPipe, StarComponent, WelcomeComponent, ProductDetailComponent, LoginComponent, RegistrationComponent, RecipeComponent, CarouselComponent, RecipeListComponent, AppetizerComponent, EntreeComponent, DesertComponent, SelectedRecipeComponent ],
 	providers: [ ProductDetailGuard, RecipeService ],
   bootstrap: [ AppComponent ]
 })

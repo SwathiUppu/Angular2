@@ -17,16 +17,22 @@ require('rxjs/add/operator/catch');
 let RecipeService = class RecipeService {
     constructor(_http) {
         this._http = _http;
-        this._recipeUrl = 'api/products/appetizers.json';
     }
-    getRecipes() {
+    getRecipes(recipeType) {
+        this._recipeUrl = 'api/products/' + recipeType + '.json';
+        return this._http.get(this._recipeUrl)
+            .map((res) => res.json())
+            .do(data => console.log(JSON.stringify(data)))
+            .catch(this.errorHandler);
+    }
+    getSelectedRecipe(recipeType, recipeName) {
+        this._recipeUrl = 'api/appetizers/' + recipeType + '_' + recipeName + '.json';
         return this._http.get(this._recipeUrl)
             .map((res) => res.json())
             .do(data => console.log(JSON.stringify(data)))
             .catch(this.errorHandler);
     }
     errorHandler(error) {
-        console.log(error);
         return Observable_1.Observable.throw(error.json().error || 'Server Error');
     }
 };

@@ -2,10 +2,12 @@
   <h3>Vegetarian</h3>
   <div class="col-sm-6 col-md-3" *ngFor="let vegAppetizers of recipes.vegetarian">
     <div class="thumbnail">
+		   <a [routerLink]="['/selectedRecipe', 'appetizer', vegAppetizers.recipe_alias]">
       <img src="{{vegAppetizers.image}}" alt="...">
       <div class="caption">
         <h3>{{vegAppetizers.recipe_name}}</h3>
       </div>
+			</a>
     </div>
   </div>
 	

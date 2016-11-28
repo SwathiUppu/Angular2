@@ -15,7 +15,7 @@ let AppetizerComponent = class AppetizerComponent {
         this._recipeService = _recipeService;
     }
     ngOnInit() {
-        this._recipeService.getRecipes()
+        this._recipeService.getRecipes('appetizers')
             .subscribe(data => this.recipes = data);
     }
 };

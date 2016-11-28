@@ -5,18 +5,14 @@ import { RecipeService } from '../services/recipe-services';
   templateUrl: 'app/recipes/appetizer-recipes.component.html'
 })
 
-export class AppetizerComponent implements OnInit{
-	recipes: any[];
-	 constructor(private _recipeService: RecipeService) {
+export class AppetizerComponent implements OnInit {
+  recipes: any[];
+  constructor(private _recipeService: RecipeService) {}
 
-    }
-		
-		ngOnInit(): void {
-        this._recipeService.getRecipes()
-                .subscribe(data => this.recipes = data);
-    }
-		
-
+  ngOnInit(): void {
+  this._recipeService.getRecipes('appetizers')
+      .subscribe(data => this.recipes = data);
+  }
 }
 
 

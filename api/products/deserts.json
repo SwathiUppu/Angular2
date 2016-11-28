@@ -1,0 +1,78 @@
+{
+    "vegetarian": [
+        {
+            "image":"http://www.angulartypescript.com/wp-content/uploads/2016/03/car1.jpg",
+            "recipe_name": "DesertRecipe"
+        },
+        {
+            "image":"http://www.angulartypescript.com/wp-content/uploads/2016/03/car1.jpg",
+            "recipe_name": "DesertRecipe1"
+        },
+        {
+            "image":"http://www.angulartypescript.com/wp-content/uploads/2016/03/car1.jpg",
+            "recipe_name": "DesertRecipe2"
+        },
+        {
+            "image":"http://www.angulartypescript.com/wp-content/uploads/2016/03/car1.jpg",
+            "recipe_name": "DesertRecipe3"
+        },
+        {
+            "image":"http://www.angulartypescript.com/wp-content/uploads/2016/03/car1.jpg",
+            "recipe_name": "DesertRecipe4"
+        },
+        {
+            "image":"http://www.angulartypescript.com/wp-content/uploads/2016/03/car1.jpg",
+            "recipe_name": "DesertRecipe5"
+        },
+        {
+            "image":"http://www.angulartypescript.com/wp-content/uploads/2016/03/car1.jpg",
+            "recipe_name": "DesertRecipe6"
+        },
+        {
+            "image":"http://www.angulartypescript.com/wp-content/uploads/2016/03/car1.jpg",
+            "recipe_name": "DesertRecipe7"
+        },
+        {
+            "image":"http://www.angulartypescript.com/wp-content/uploads/2016/03/car1.jpg",
+            "recipe_name": "DesertRecipe8"
+        }
+    ],
+    "nonvegetarian": [
+        {
+            "image":"http://www.angulartypescript.com/wp-content/uploads/2016/03/car1.jpg",
+            "recipe_name": "nonDesertRecipe"
+        },
+        {
+            "image":"http://www.angulartypescript.com/wp-content/uploads/2016/03/car1.jpg",
+            "recipe_name": "nonDesertRecipe1"
+        },
+        {
+            "image":"http://www.angulartypescript.com/wp-content/uploads/2016/03/car1.jpg",
+            "recipe_name": "nonDesertRecipe2"
+        },
+        {
+            "image":"http://www.angulartypescript.com/wp-content/uploads/2016/03/car1.jpg",
+            "recipe_name": "nonDesertRecipe3"
+        },
+        {
+            "image":"http://www.angulartypescript.com/wp-content/uploads/2016/03/car1.jpg",
+            "recipe_name": "nonDesertRecipe4"
+        },
+        {
+            "image":"http://www.angulartypescript.com/wp-content/uploads/2016/03/car1.jpg",
+            "recipe_name": "nonDesertRecipe5"
+        },
+        {
+            "image":"http://www.angulartypescript.com/wp-content/uploads/2016/03/car1.jpg",
+            "recipe_name": "nonDesertRecipe6"
+        },
+        {
+            "image":"http://www.angulartypescript.com/wp-content/uploads/2016/03/car1.jpg",
+            "recipe_name": "nonDesertRecipe7"
+        },
+        {
+            "image":"http://www.angulartypescript.com/wp-content/uploads/2016/03/car1.jpg",
+            "recipe_name": "nonDesertRecipe8"
+        }
+    ]
+}
