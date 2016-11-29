@@ -26,7 +26,7 @@ let RecipeService = class RecipeService {
             .catch(this.errorHandler);
     }
     getSelectedRecipe(recipeType, recipeName) {
-        this._recipeUrl = 'api/appetizers/' + recipeType + '_' + recipeName + '.json';
+        this._recipeUrl = 'api/' + recipeType + '/' + recipeType + '_' + recipeName + '.json';
         return this._http.get(this._recipeUrl)
             .map((res) => res.json())
             .do(data => console.log(JSON.stringify(data)))

@@ -5,3 +5,9 @@ li {
 .text-align-left {
 	text-align: left;
 }
+
+.image-size {
+	height: 144px;
+  width: 241px;
+}
+

@@ -7,7 +7,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 })
 
 export class RegistrationComponent {
-  pageTitle: string = 'Registration Page';
+  pageTitle: string = 'Registration';
 	model: any = {};
 	constructor(private _route: ActivatedRoute, private _router: Router) {
 		//console.log(this._route.snapshot.data);

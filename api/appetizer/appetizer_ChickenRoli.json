@@ -1,6 +1,6 @@
 {
-    "recipe_name": "Cheese Balls",
-	"image": "api/images/cheese_balls.jpg",
+    "recipe_name": "Broccoli Chicken Roli",
+	"image": "api/images/chicken_roli.jpg",
     "ingredients": [
         {
             "quantity": "2 cups",

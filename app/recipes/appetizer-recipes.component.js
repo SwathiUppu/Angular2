@@ -21,7 +21,8 @@ let AppetizerComponent = class AppetizerComponent {
 };
 AppetizerComponent = __decorate([
     core_1.Component({
-        templateUrl: 'app/recipes/appetizer-recipes.component.html'
+        templateUrl: 'app/recipes/appetizer-recipes.component.html',
+        styleUrls: ['app/recipes/recipes.css']
     }), 
     __metadata('design:paramtypes', [recipe_services_1.RecipeService])
 ], AppetizerComponent);

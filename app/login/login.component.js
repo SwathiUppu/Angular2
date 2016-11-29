@@ -14,7 +14,7 @@ let LoginComponent = class LoginComponent {
     constructor(_route, _router) {
         this._route = _route;
         this._router = _router;
-        this.pageTitle = 'Login Page';
+        this.pageTitle = 'Login';
         this.submitted = false;
         this.registered = false;
         this.loginFailed = false;

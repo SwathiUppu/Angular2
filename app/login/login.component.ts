@@ -7,7 +7,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 })
 
 export class LoginComponent {
-  pageTitle: string = 'Login Page';
+  pageTitle: string = 'Login';
   username: string;
   password: string;
   submitted: boolean = false;

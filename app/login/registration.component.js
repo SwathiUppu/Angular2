@@ -14,7 +14,7 @@ let RegistrationComponent = class RegistrationComponent {
     constructor(_route, _router) {
         this._route = _route;
         this._router = _router;
-        this.pageTitle = 'Registration Page';
+        this.pageTitle = 'Registration';
         this.model = {};
         //console.log(this._route.snapshot.data);
     }

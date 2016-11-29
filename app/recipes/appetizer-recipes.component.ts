@@ -2,7 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { RecipeService } from '../services/recipe-services';
 
 @Component({
-  templateUrl: 'app/recipes/appetizer-recipes.component.html'
+  templateUrl: 'app/recipes/appetizer-recipes.component.html',
+	styleUrls: ['app/recipes/recipes.css']
 })
 
 export class AppetizerComponent implements OnInit {

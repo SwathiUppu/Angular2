@@ -19,7 +19,7 @@ export class RecipeService {
   }
 	
 	getSelectedRecipe(recipeType: string, recipeName: string) : Observable<any []> {
-		this._recipeUrl = 'api/appetizers/'+recipeType+'_'+recipeName+'.json';
+		this._recipeUrl = 'api/'+ recipeType + '/' + recipeType + '_' + recipeName + '.json';
 		return this._http.get(this._recipeUrl)
 		           .map((res:Response) => res.json())
 							 .do(data => console.log(JSON.stringify(data)))
