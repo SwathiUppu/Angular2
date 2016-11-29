@@ -1,6 +1,6 @@
 {
     "recipe_name": "Cheese Balls",
-	"image": "api/images/cheese_balls.jpg",
+    "image": "api/images/cheese_balls.jpg",
     "ingredients": [
         {
             "quantity": "2 (8 ounce)",

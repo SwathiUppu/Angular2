@@ -12,7 +12,7 @@ import { RecipeService } from './services/recipe-services';
 							<div class="container">
 							  <router-outlet></router-outlet>
 							</div>`,
-	providers: [ ProductService,RecipeService ]
+	providers: [ ProductService, RecipeService ]
 	
 })
 

@@ -11,8 +11,13 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 const core_1 = require('@angular/core');
 const recipe_services_1 = require('../services/recipe-services');
 let EntreeComponent = class EntreeComponent {
-    constructor(_recipeService) {
+    constructor(_recipeService, _window) {
         this._recipeService = _recipeService;
+        this._window = _window;
+        console.log(this._window);
+    }
+    gototop() {
+        this._window.scrollTo(0, 0);
     }
     ngOnInit() {
         this._recipeService.getRecipes('entree')
@@ -21,9 +26,10 @@ let EntreeComponent = class EntreeComponent {
 };
 EntreeComponent = __decorate([
     core_1.Component({
-        templateUrl: 'app/recipes/entree-recipes.component.html'
+        templateUrl: 'app/recipes/entree-recipes.component.html',
+        providers: [{ provide: Window, useValue: window }]
     }), 
-    __metadata('design:paramtypes', [recipe_services_1.RecipeService])
+    __metadata('design:paramtypes', [recipe_services_1.RecipeService, Window])
 ], EntreeComponent);
 exports.EntreeComponent = EntreeComponent;
 //# sourceMappingURL=entree-recipes.component.js.map

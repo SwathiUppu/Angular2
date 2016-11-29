@@ -1,3 +1,7 @@
+<div>
+<button class="btn btn-primary" (click)="goBack()">Back to {{recipeType}}</button>
+</div>
+
 <div *ngIf="selectedRecipe">
   <h2 *ngIf="selectedRecipe.recipe_name"> {{ selectedRecipe.recipe_name}} </h2>
 	<div class="row">

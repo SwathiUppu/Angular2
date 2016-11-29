@@ -12,14 +12,18 @@ const core_1 = require('@angular/core');
 const recipe_services_1 = require('../services/recipe-services');
 const router_1 = require('@angular/router');
 let SelectedRecipeComponent = class SelectedRecipeComponent {
-    constructor(_route, _recipeService) {
+    constructor(_route, _router, _recipeService) {
         this._route = _route;
+        this._router = _router;
         this._recipeService = _recipeService;
     }
+    goBack() {
+        this._router.navigate(['/' + this._route.snapshot.params['recipeType']]);
+    }
     ngOnInit() {
-        let recipeType = this._route.snapshot.params['recipeType'];
+        this.recipeType = this._route.snapshot.params['recipeType'];
         let recipeName = this._route.snapshot.params['recipeName'];
-        this._recipeService.getSelectedRecipe(recipeType, recipeName)
+        this._recipeService.getSelectedRecipe(this.recipeType, recipeName)
             .subscribe(data => this.selectedRecipe = data);
     }
 };
@@ -28,7 +32,7 @@ SelectedRecipeComponent = __decorate([
         templateUrl: 'app/recipes/selected-recipe.component.html',
         styleUrls: ['app/recipes/recipes.css']
     }), 
-    __metadata('design:paramtypes', [router_1.ActivatedRoute, recipe_services_1.RecipeService])
+    __metadata('design:paramtypes', [router_1.ActivatedRoute, router_1.Router, recipe_services_1.RecipeService])
 ], SelectedRecipeComponent);
 exports.SelectedRecipeComponent = SelectedRecipeComponent;
 //# sourceMappingURL=selected-recipe.component.js.map
