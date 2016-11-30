@@ -4,32 +4,33 @@
   </div>
 	<div class="panel-body">
     <div class="row">
-		  <form #f="ngForm" (ngSubmit)="f.form.valid && registrationSubmit()" novalidate>
-			  <div  class="alert alert-danger" *ngIf="f.submitted && (firstname.invalid || lastname.invalid || email.invalid || username.invalid || password.invalid)">Please fill all required fields</div>
-			  <div class="form-group" [ngClass]="{'has-error': f.submitted && firstname.invalid }">
+		  <form [formGroup]="registrationForm" (ngSubmit)="registrationSubmit(registrationForm.valid)" novalidate>
+			  <div  class="alert alert-danger" *ngIf="submitted && !registrationForm.valid">Please fill all required fields</div>
+			  <div class="form-group" [ngClass]="{'has-error': submitted && !registrationForm.controls['firstname'].valid}">
 				  <label for="firstname">Firstname</label>
-				  <input type="text" class="form-control" name="firstname" [(ngModel)]="model.firstname" #firstname="ngModel" (ngModelChange)="changeUsername(model.firstname, 'firstname')"required />
-					<div class="error-message" *ngIf="f.submitted && firstname.invalid">Firstname is required</div>
+				  <input type="text" class="form-control" name="firstname" [(ngModel)]="model.firstname" [formControl]="registrationForm.controls['firstname']" (ngModelChange)="changeUsername(model.firstname, 'firstname')"required />
+					<div class="error-message" *ngIf="submitted && !registrationForm.controls['firstname'].valid">Firstname is required</div>
 			  </div>
-				<div class="form-group" [ngClass]="{'has-error': f.submitted && lastname.invalid }">
+				<div class="form-group" [ngClass]="{'has-error': submitted && !registrationForm.controls['lastname'].valid }">
 				  <label for="lastname">Lastname</label>
-					<input type="text" class="form-control" name="lastname" [(ngModel)]="model.lastname" #lastname="ngModel" (ngModelChange)="changeUsername(model.lastname, 'lastname')" required />
-					<div class="error-message" *ngIf="f.submitted && lastname.invalid">Lastname is required</div>
+					<input type="text" class="form-control" name="lastname" [(ngModel)]="model.lastname" [formControl]="registrationForm.controls['lastname']" (ngModelChange)="changeUsername(model.lastname, 'lastname')" required />
+					<div class="error-message" *ngIf="submitted && !registrationForm.controls['lastname'].valid">Lastname is required</div>
 				</div>
-			  <div class="form-group" [ngClass]="{'has-error': f.submitted && email.invalid }">
+			  <div class="form-group" [ngClass]="{'has-error': submitted && !registrationForm.controls['email'].valid }">
 				  <label for="email">Email</label>
-					<input type="email" pattern="^[a-zA-Z0-9.!#$%&amp;’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$" class="form-control" name="email" [(ngModel)]="model.email" #email="ngModel" required />
-					<div class="error-message" *ngIf="f.submitted && email.invalid">Email is required</div>
+					<input type="email"  class="form-control" name="email" [(ngModel)]="model.email" [formControl]="registrationForm.controls['email']" required />
+					<div class="error-message" *ngIf="submitted && registrationForm.controls['email'].hasError('required')">Email is required</div>
+					<div class="error-message" *ngIf="submitted && registrationForm.controls['email'].hasError('pattern')">Please enter valid email address</div>
 				</div>
-				<div class="form-group" [ngClass]="{'has-error': f.submitted && username.invalid }">
+				<div class="form-group" [ngClass]="{'has-error': submitted && !registrationForm.controls['username'].valid }">
 				  <label for="username">Username</label>
-					<input type="text" class="form-control" name="username" [(ngModel)]="model.username" #username="ngModel" required />
-					<div class="error-message" *ngIf="f.submitted && username.invalid">Username is required</div>
+					<input type="text" class="form-control" name="username" [(ngModel)]="model.username" [formControl]="registrationForm.controls['username']" required />
+					<div class="error-message" *ngIf="submitted && !registrationForm.controls['username'].valid">Username is required</div>
 				</div>
-				<div class="form-group" [ngClass]="{'has-error': f.submitted && password.invalid }">
+				<div class="form-group" [ngClass]="{'has-error': submitted && !registrationForm.controls['password'].valid }">
 				  <label for="password">Password</label>
-					<input type="password" class="form-control" name="password" [(ngModel)]="model.password" #password="ngModel" required />
-					<div class="error-message" *ngIf="f.submitted && password.invalid">Password is required</div>
+					<input type="password" class="form-control" name="password" [(ngModel)]="model.password" [formControl]="registrationForm.controls['password']" required />
+					<div class="error-message" *ngIf="submitted && !registrationForm.controls['password'].valid ">Password is required</div>
 				</div>
 				<div class="form-group">
 				  <button class="btn btn-primary" type="submit">Register</button>
@@ -38,3 +39,4 @@
     </div>
   </div>
 </div>
+

@@ -4,19 +4,19 @@
   </div>
   <div class="panel-body">
     <div class="row">
-		  <form name="form" (ngSubmit)="loginSubmit()" #f="ngForm" novalidate>
+		  <form name="form" (ngSubmit)="loginSubmit(loginForm.value, loginForm.valid)" [formGroup]="loginForm" novalidate>
 			  <div class="alert alert-success" *ngIf="registered">You have successfully registered.Please login.</div>
-			  <div  class="alert alert-danger" *ngIf="f.submitted && (!username.valid || !password.valid)">Please fill the required fields</div>
+			  <div  class="alert alert-danger" *ngIf="submitted && !loginForm.valid">Please fill the required fields</div>
 				<div class="alert alert-danger" *ngIf="loginFailed">Please enter valid credentials</div>
-        <div class="form-group" [ngClass]="{ 'has-error': f.submitted && !username.valid }">
+        <div class="form-group" [ngClass]="{ 'has-error': submitted && !loginForm.controls['username'].valid }">
           <label for="username">Username</label>
-          <input type="text" class="form-control" name="username" [(ngModel)]="model.username" #username="ngModel" required />
-          <div class="error-message" *ngIf="f.submitted && !username.valid" class="help-block">Username is required</div>
+          <input type="text" class="form-control" name="username" [formControl]="loginForm.controls['username']" [(ngModel)]="model.username" required />
+          <div class="error-message" *ngIf="submitted && !loginForm.controls['username'].valid" class="help-block">Username is required</div>
         </div>
-        <div class="form-group" [ngClass]="{ 'has-error': f.submitted && !password.valid }">
+        <div class="form-group" [ngClass]="{ 'has-error': submitted && !loginForm.controls['password'].valid }">
           <label for="password">Password</label>
-          <input type="password" class="form-control" name="password" [(ngModel)]="model.password" #password="ngModel" required />
-           <div class="error-message" *ngIf="f.submitted && !password.valid" class="help-block">Password is required</div>
+          <input type="password" class="form-control" name="password" [formControl]="loginForm.controls['password']" [(ngModel)]="model.password" required />
+           <div class="error-message" *ngIf="submitted && !loginForm.controls['password'].valid" class="help-block">Password is required</div>
         </div>
         <div class="form-group">
           <button class="btn btn-primary">Login</button>

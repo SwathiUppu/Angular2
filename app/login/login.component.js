@@ -10,8 +10,10 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 const core_1 = require('@angular/core');
 const router_1 = require('@angular/router');
+const forms_1 = require('@angular/forms');
 let LoginComponent = class LoginComponent {
-    constructor(_route, _router) {
+    constructor(fb, _route, _router) {
+        this.fb = fb;
         this._route = _route;
         this._router = _router;
         this.pageTitle = 'Login';
@@ -19,16 +21,20 @@ let LoginComponent = class LoginComponent {
         this.registered = false;
         this.loginFailed = false;
         this.model = {};
-        /* if(this._route.queryParams._value && this._route.queryParams._value.registered) {
-           this.registered = true;
-         }*/
+        if (this._route.snapshot.queryParams['registered']) {
+            this.registered = true;
+        }
+        this.loginForm = fb.group({
+            'username': [null, forms_1.Validators.required],
+            'password': [null, forms_1.Validators.compose([forms_1.Validators.required, forms_1.Validators.minLength(4), forms_1.Validators.maxLength(10)])]
+        });
     }
-    loginSubmit() {
+    loginSubmit(loginDetails, isValid) {
         this.registered = false;
         this.submitted = true;
-        if (this.model.username && this.model.password) {
+        if (isValid) {
             this.submitted = false;
-            if (this.model.username === 'user' && this.model.password === 'user') {
+            if (loginDetails.username === 'user' && loginDetails.password === 'user') {
                 this._router.navigate(['/recipes-home']);
                 this.loginFailed = false;
             }
@@ -43,7 +49,7 @@ LoginComponent = __decorate([
         templateUrl: 'app/login/login.component.html',
         styleUrls: ['app/login/login.component.css']
     }), 
-    __metadata('design:paramtypes', [router_1.ActivatedRoute, router_1.Router])
+    __metadata('design:paramtypes', [forms_1.FormBuilder, router_1.ActivatedRoute, router_1.Router])
 ], LoginComponent);
 exports.LoginComponent = LoginComponent;
 //# sourceMappingURL=login.component.js.map

@@ -1,32 +1,43 @@
-import { Component } from '@angular/core';  
+import { Component } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 @Component({
     templateUrl: 'app/login/registration.component.html',
-		styleUrls: ['app/login/login.component.css']
+    styleUrls: ['app/login/login.component.css']
 })
 
 export class RegistrationComponent {
+  registrationForm: FormGroup;
   pageTitle: string = 'Registration';
-	model: any = {};
-	constructor(private _route: ActivatedRoute, private _router: Router) {
-		//console.log(this._route.snapshot.data);
-	}
-	changeUsername(value: string, modelname: string)  {
-		if(value.length > 0) {
+  submitted: boolean = false;
+  model: any = {};
+  constructor(private _route: ActivatedRoute, private _router: Router, private fb: FormBuilder) {
+    this.registrationForm = fb.group({
+      'firstname': [null, Validators.required],
+      'lastname': [null, Validators.required],
+      'email': [null, Validators.compose([ Validators.required, Validators.pattern('^[a-zA-Z0-9.!#$%&amp;’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$')])],
+      'username': [null, Validators.required],
+      'password': [null, Validators.required]
+    })
+  }
+
+  changeUsername(value: string, modelname: string)  {
+    if(value && value.length > 0) {
       this.model[modelname] = value.charAt(0).toUpperCase() + value.slice(1);
     } else {
       this.model[modelname] = value;
     }
   }
-	registrationSubmit(): void {
-		if(this.model.firstname && this.model.lastname && this.model.email && this.model.username && this.model.password) {
-			this._router.navigate(['/login'],{ queryParams: { registered:'true'}})
-		} else {
-			
-		}
-	}
-	
-	
+
+  registrationSubmit(isValid): void {
+    this.submitted = true;
+    if(isValid) {
+      this._router.navigate(['/login'],{ queryParams: { registered:'true'}})
+    }
+  }
+
+
 }
+
 

@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, Inject } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   templateUrl: 'app/login/login.component.html',
@@ -7,6 +8,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 })
 
 export class LoginComponent {
+  loginForm: FormGroup;
   pageTitle: string = 'Login';
   username: string;
   password: string;
@@ -15,18 +17,25 @@ export class LoginComponent {
   loginFailed: boolean = false;
   model: any = {};
 
-  constructor(private _route: ActivatedRoute, private _router: Router) {
-   /* if(this._route.queryParams._value && this._route.queryParams._value.registered) {
+
+  constructor(private fb: FormBuilder, private _route: ActivatedRoute, private _router: Router) {
+    if(this._route.snapshot.queryParams['registered']) {
       this.registered = true;
-    }*/
+    }
+    this.loginForm = fb.group({
+      'username' : [null, Validators.required],
+      'password': [null, Validators.compose([Validators.required, Validators.minLength(4), Validators.maxLength(10)])]
+    })
   }
 
- loginSubmit(): void {
+
+
+ loginSubmit(loginDetails: any[], isValid: boolean): void {
    this.registered = false;
    this.submitted = true;
-   if(this.model.username && this.model.password) {
+   if(isValid) {
      this.submitted = false;
-     if(this.model.username === 'user' && this.model.password === 'user'){
+     if(loginDetails.username === 'user' && loginDetails.password === 'user'){
      this._router.navigate(['/recipes-home'])
      this.loginFailed = false;
    } else {

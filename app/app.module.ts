@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AppComponent }  from './app.component';
 import { HttpModule }  from '@angular/http';
 import { WelcomeComponent }  from './home/welcome.component';
@@ -18,7 +18,7 @@ import { CarouselComponent } from './shared/carousel';
 import { AppRoutingModule } from './route';
 
 @NgModule({
-  imports: [ BrowserModule, FormsModule, HttpModule, AppRoutingModule ],
+  imports: [ BrowserModule, FormsModule, HttpModule, ReactiveFormsModule, AppRoutingModule ],
   declarations: [ AppComponent, WelcomeComponent, LoginComponent, RegistrationComponent, RecipeComponent, CarouselComponent, RecipeListComponent, AppetizerComponent, EntreeComponent, DesertComponent, SelectedRecipeComponent ],
 	providers: [  RecipeService ],
   bootstrap: [ AppComponent ]
