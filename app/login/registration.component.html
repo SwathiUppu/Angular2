@@ -8,28 +8,37 @@
 			  <div  class="alert alert-danger" *ngIf="submitted && !registrationForm.valid">Please fill all required fields</div>
 			  <div class="form-group" [ngClass]="{'has-error': submitted && !registrationForm.controls['firstname'].valid}">
 				  <label for="firstname">Firstname</label>
-				  <input type="text" class="form-control" name="firstname" [(ngModel)]="model.firstname" [formControl]="registrationForm.controls['firstname']" (ngModelChange)="changeUsername(model.firstname, 'firstname')"required />
+				  <input type="text" class="form-control" name="firstname" [(ngModel)]="model.firstname" [formControl]="registrationForm.controls['firstname']" (ngModelChange)="changeUsername(model.firstname, 'firstname')" />
 					<div class="error-message" *ngIf="submitted && !registrationForm.controls['firstname'].valid">Firstname is required</div>
 			  </div>
 				<div class="form-group" [ngClass]="{'has-error': submitted && !registrationForm.controls['lastname'].valid }">
 				  <label for="lastname">Lastname</label>
-					<input type="text" class="form-control" name="lastname" [(ngModel)]="model.lastname" [formControl]="registrationForm.controls['lastname']" (ngModelChange)="changeUsername(model.lastname, 'lastname')" required />
+					<input type="text" class="form-control" name="lastname" [(ngModel)]="model.lastname" [formControl]="registrationForm.controls['lastname']" (ngModelChange)="changeUsername(model.lastname, 'lastname')" />
 					<div class="error-message" *ngIf="submitted && !registrationForm.controls['lastname'].valid">Lastname is required</div>
+				</div>
+				<div class="form-group" [ngClass]="{'has-error': submitted && !registrationForm.controls['gender'].valid }">
+				  <label for="gender">Gender</label>
+					<select class="form-control" name="gender" [(ngModel)]="model.gender" [formControl]="registrationForm.controls['gender']">
+					  <option value="">Select Gender</option>
+						<option>Male</option>
+						<option>Female</option>
+					</select>
+					<div class="error-message" *ngIf="submitted && !registrationForm.controls['gender'].valid">Gender is required</div>
 				</div>
 			  <div class="form-group" [ngClass]="{'has-error': submitted && !registrationForm.controls['email'].valid }">
 				  <label for="email">Email</label>
-					<input type="email"  class="form-control" name="email" [(ngModel)]="model.email" [formControl]="registrationForm.controls['email']" required />
+					<input type="email"  class="form-control" name="email" [(ngModel)]="model.email" [formControl]="registrationForm.controls['email']" />
 					<div class="error-message" *ngIf="submitted && registrationForm.controls['email'].hasError('required')">Email is required</div>
 					<div class="error-message" *ngIf="submitted && registrationForm.controls['email'].hasError('pattern')">Please enter valid email address</div>
 				</div>
 				<div class="form-group" [ngClass]="{'has-error': submitted && !registrationForm.controls['username'].valid }">
 				  <label for="username">Username</label>
-					<input type="text" class="form-control" name="username" [(ngModel)]="model.username" [formControl]="registrationForm.controls['username']" required />
+					<input type="text" class="form-control" name="username" [(ngModel)]="model.username" [formControl]="registrationForm.controls['username']" />
 					<div class="error-message" *ngIf="submitted && !registrationForm.controls['username'].valid">Username is required</div>
 				</div>
 				<div class="form-group" [ngClass]="{'has-error': submitted && !registrationForm.controls['password'].valid }">
 				  <label for="password">Password</label>
-					<input type="password" class="form-control" name="password" [(ngModel)]="model.password" [formControl]="registrationForm.controls['password']" required />
+					<input type="password" class="form-control" name="password" [(ngModel)]="model.password" [formControl]="registrationForm.controls['password']" />
 					<div class="error-message" *ngIf="submitted && !registrationForm.controls['password'].valid ">Password is required</div>
 				</div>
 				<div class="form-group">

@@ -19,9 +19,11 @@ let RegistrationComponent = class RegistrationComponent {
         this.pageTitle = 'Registration';
         this.submitted = false;
         this.model = {};
+        this.genders = ["Male", "Female"];
         this.registrationForm = fb.group({
             'firstname': [null, forms_1.Validators.required],
             'lastname': [null, forms_1.Validators.required],
+            'gender': [null, forms_1.Validators.required],
             'email': [null, forms_1.Validators.compose([forms_1.Validators.required, forms_1.Validators.pattern('^[a-zA-Z0-9.!#$%&amp;’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$')])],
             'username': [null, forms_1.Validators.required],
             'password': [null, forms_1.Validators.required]

@@ -16,10 +16,11 @@ import { RecipeService }  from './services/recipe-services';
 import { RouterModule } from '@angular/router';
 import { CarouselComponent } from './shared/carousel';
 import { AppRoutingModule } from './route';
+import { TestDirective } from './directives/test.directive'
 
 @NgModule({
   imports: [ BrowserModule, FormsModule, HttpModule, ReactiveFormsModule, AppRoutingModule ],
-  declarations: [ AppComponent, WelcomeComponent, LoginComponent, RegistrationComponent, RecipeComponent, CarouselComponent, RecipeListComponent, AppetizerComponent, EntreeComponent, DesertComponent, SelectedRecipeComponent ],
+  declarations: [ AppComponent, WelcomeComponent, LoginComponent, RegistrationComponent, RecipeComponent, CarouselComponent, RecipeListComponent, AppetizerComponent, EntreeComponent, DesertComponent, SelectedRecipeComponent, TestDirective ],
 	providers: [  RecipeService ],
   bootstrap: [ AppComponent ]
 })

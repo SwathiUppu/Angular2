@@ -1,9 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { RecipeService } from '../services/recipe-services';
+import { RecipeFilterComponent } from './recipe-filter.pipe';
 
 @Component({
   templateUrl: 'app/recipes/appetizer-recipes.component.html',
-	styleUrls: ['app/recipes/recipes.css']
+	styleUrls: ['app/recipes/recipes.css'],
+	pipes: [RecipeFilterComponent]
 })
 
 export class AppetizerComponent implements OnInit {

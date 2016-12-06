@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Users } from './users'
 import { ActivatedRoute, Router } from '@angular/router';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
@@ -7,15 +8,17 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
     styleUrls: ['app/login/login.component.css']
 })
 
-export class RegistrationComponent {
+export class 	 {
   registrationForm: FormGroup;
   pageTitle: string = 'Registration';
   submitted: boolean = false;
-  model: any = {};
+  model: Users{};
+	genders: any[] = ["Male", "Female"];
   constructor(private _route: ActivatedRoute, private _router: Router, private fb: FormBuilder) {
     this.registrationForm = fb.group({
       'firstname': [null, Validators.required],
       'lastname': [null, Validators.required],
+			'gender':[null, Validators.required],
       'email': [null, Validators.compose([ Validators.required, Validators.pattern('^[a-zA-Z0-9.!#$%&amp;’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$')])],
       'username': [null, Validators.required],
       'password': [null, Validators.required]
@@ -30,7 +33,7 @@ export class RegistrationComponent {
     }
   }
 
-  registrationSubmit(isValid): void {
+  registrationSubmit(isValid:boolean): void {
     this.submitted = true;
     if(isValid) {
       this._router.navigate(['/login'],{ queryParams: { registered:'true'}})
