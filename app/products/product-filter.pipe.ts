@@ -20,7 +20,7 @@ import {  PipeTransform, Pipe } from '@angular/core';
 @Pipe({
     name: 'recipeFilter'
 })
-export class ProductFilterPipe implements PipeTransform {
+export class ProductFilterPipe {
 
     /*transform(value: IProduct[], filterBy: string): IProduct[] {
         filterBy = filterBy ? filterBy.toLocaleLowerCase() : null;

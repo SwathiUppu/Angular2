@@ -1,78 +1,56 @@
 {
     "vegetarian": [
-        {
-            "image":"http://www.angulartypescript.com/wp-content/uploads/2016/03/car1.jpg",
-            "recipe_name": "DesertRecipe"
+          {
+            "image": "api/images/chocolate_pudding.jpg",
+            "recipe_name": "Chocolate Pudding",
+            "recipe_alias": "Pudding"
         },
         {
-            "image":"http://www.angulartypescript.com/wp-content/uploads/2016/03/car1.jpg",
-            "recipe_name": "DesertRecipe1"
+           "image": "api/images/orange_cake.jpg",
+            "recipe_name": "Orange Vegan Cake",
+            "recipe_alias": "OrangeCake"
+        },
+        {  "image": "api/images/banana_cookies.jpg",
+            "recipe_name": "Banana Cookies",
+            "recipe_alias": "BananaCookies"
         },
         {
-            "image":"http://www.angulartypescript.com/wp-content/uploads/2016/03/car1.jpg",
-            "recipe_name": "DesertRecipe2"
+            "image": "api/images/fudge.jpg",
+            "recipe_name": "Peanut Butter Fudge",
+            "recipe_alias": "Fudge"
         },
         {
-            "image":"http://www.angulartypescript.com/wp-content/uploads/2016/03/car1.jpg",
-            "recipe_name": "DesertRecipe3"
-        },
-        {
-            "image":"http://www.angulartypescript.com/wp-content/uploads/2016/03/car1.jpg",
-            "recipe_name": "DesertRecipe4"
-        },
-        {
-            "image":"http://www.angulartypescript.com/wp-content/uploads/2016/03/car1.jpg",
-            "recipe_name": "DesertRecipe5"
-        },
-        {
-            "image":"http://www.angulartypescript.com/wp-content/uploads/2016/03/car1.jpg",
-            "recipe_name": "DesertRecipe6"
-        },
-        {
-            "image":"http://www.angulartypescript.com/wp-content/uploads/2016/03/car1.jpg",
-            "recipe_name": "DesertRecipe7"
-        },
-        {
-            "image":"http://www.angulartypescript.com/wp-content/uploads/2016/03/car1.jpg",
-            "recipe_name": "DesertRecipe8"
+            "image": "api/images/sorbet.jpg",
+            "recipe_name": "Pineapple Orange Sorbet",
+            "recipe_alias": "Sorbet"
         }
     ],
     "nonvegetarian": [
-        {
-            "image":"http://www.angulartypescript.com/wp-content/uploads/2016/03/car1.jpg",
-            "recipe_name": "nonDesertRecipe"
+       {
+            "image": "api/images/icelandic.jpg",
+            "recipe_name": "Icelandic Christmas Cake",
+            "recipe_alias": "Icelandic"
         },
-        {
-            "image":"http://www.angulartypescript.com/wp-content/uploads/2016/03/car1.jpg",
-            "recipe_name": "nonDesertRecipe1"
+				{
+            "image": "api/images/pie.jpg",
+            "recipe_name": "Chocolate Chess Pie",
+            "recipe_alias": "Pie"
         },
-        {
-            "image":"http://www.angulartypescript.com/wp-content/uploads/2016/03/car1.jpg",
-            "recipe_name": "nonDesertRecipe2"
+				{
+            "image": "api/images/tart.jpg",
+            "recipe_name": "Egg Tarts",
+            "recipe_alias": "Tart"
         },
-        {
-            "image":"http://www.angulartypescript.com/wp-content/uploads/2016/03/car1.jpg",
-            "recipe_name": "nonDesertRecipe3"
+				{
+            "image": "api/images/eggnog.jpg",
+            "recipe_name": "Eggnog Cheesecake",
+            "recipe_alias": "Eggnog"
         },
-        {
-            "image":"http://www.angulartypescript.com/wp-content/uploads/2016/03/car1.jpg",
-            "recipe_name": "nonDesertRecipe4"
-        },
-        {
-            "image":"http://www.angulartypescript.com/wp-content/uploads/2016/03/car1.jpg",
-            "recipe_name": "nonDesertRecipe5"
-        },
-        {
-            "image":"http://www.angulartypescript.com/wp-content/uploads/2016/03/car1.jpg",
-            "recipe_name": "nonDesertRecipe6"
-        },
-        {
-            "image":"http://www.angulartypescript.com/wp-content/uploads/2016/03/car1.jpg",
-            "recipe_name": "nonDesertRecipe7"
-        },
-        {
-            "image":"http://www.angulartypescript.com/wp-content/uploads/2016/03/car1.jpg",
-            "recipe_name": "nonDesertRecipe8"
+				{
+            "image": "api/images/rumcake.jpg",
+            "recipe_name": "Rum Cake",
+            "recipe_alias": "RumCake"
         }
+				
     ]
 }

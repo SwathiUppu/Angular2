@@ -1,36 +1,39 @@
 <div>
-<button class="btn btn-primary" [routerLink]="['/recipeList']">Back to the courses</button>
+  <button class="btn btn-primary" [routerLink]="['/recipeList']">Back to the courses</button>
 </div>
-<input type="text" [(ngModel)]='listFilter'/>
 <div class="row"  *ngIf="recipes && recipes.vegetarian">
-  <h3>Vegetarian</h3>
-  <div class="col-sm-6 col-md-3" *ngFor="let vegAppetizers of recipes.vegetarian">
+  <div class="display-header">
+	  <h3 class="display-inline">Vegetarian</h3>
+	  <input type="text" class="form-control input-type" [(ngModel)]='vegAppetizerFilter' placeholder="Search for veg appetizers"/>
+	  <hr style="clear:both;"/>
+	</div>
+  <div class="col-sm-6 col-md-3" *ngFor="let vegAppetizers of recipes.vegetarian | searchFilter : vegAppetizerFilter">
     <div class="thumbnail" style="height: 228px;">
-		   <a [routerLink]="['/selectedRecipe', 'appetizer', vegAppetizers.recipe_alias]">
-      <img style="height: 144px;width: 241px;" src="{{vegAppetizers.image}}" alt="...">
-      <div class="caption">
-        <h4>{{vegAppetizers.recipe_name}}</h4>
-      </div>
+		  <a [routerLink]="['/selectedRecipe', 'appetizer', vegAppetizers.recipe_alias]">
+        <img style="height: 144px;width: 241px;" src="{{vegAppetizers.image}}" alt="...">
+        <div class="caption">
+          <h4>{{vegAppetizers.recipe_name}}</h4>
+        </div>
 			</a>
     </div>
   </div>
-	
-	
-
 </div>
 
 
 <div class="row" *ngIf="recipes && recipes.nonvegetarian">
-  <h3>Non Vegetarian</h3>
-  <div class="col-sm-6 col-md-3" *ngFor="let nonvegAppetizers of recipes.nonvegetarian">
+  <div class="display-header">
+	  <h3 class="display-inline">Vegetarian</h3>
+	  <input type="text" class="form-control input-type" [(ngModel)]='nonvegAppetizerFilter' placeholder="Search for non veg appetizers"/>
+	  <hr style="clear:both;"/>
+	</div>
+  <div class="col-sm-6 col-md-3" *ngFor="let nonvegAppetizers of recipes.nonvegetarian  | searchFilter : nonvegAppetizerFilter">
     <div class="thumbnail" style="height: 228px;">
-	 <a [routerLink]="['/selectedRecipe', 'appetizer', nonvegAppetizers.recipe_alias]">
-      <img style="height: 144px;width: 241px;" src="{{nonvegAppetizers.image}}" alt="...">
-      <div class="caption">
-        <h4>{{nonvegAppetizers.recipe_name}}</h4>
-      </div>
-	  </a>
+	    <a [routerLink]="['/selectedRecipe', 'appetizer', nonvegAppetizers.recipe_alias]">
+        <img style="height: 144px;width: 241px;" src="{{nonvegAppetizers.image}}" alt="...">
+        <div class="caption">
+          <h4>{{nonvegAppetizers.recipe_name}}</h4>
+        </div>
+	    </a>
     </div>
   </div>
-
 </div>

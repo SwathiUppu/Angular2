@@ -1,8 +1,7 @@
 import { Directive, ElementRef, Input, Renderer } from '@angular/core';
 
 
-@Directive({ selector: 'testDirective',
-             template: '<p>highlight</p>'
+@Directive({ selector: 'testDirective'
 
  })
 

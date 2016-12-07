@@ -27,7 +27,8 @@ let EntreeComponent = class EntreeComponent {
 EntreeComponent = __decorate([
     core_1.Component({
         templateUrl: 'app/recipes/entree-recipes.component.html',
-        providers: [{ provide: Window, useValue: window }]
+        providers: [{ provide: Window, useValue: window }],
+        styleUrls: ['app/recipes/recipes.css']
     }), 
     __metadata('design:paramtypes', [recipe_services_1.RecipeService, Window])
 ], EntreeComponent);

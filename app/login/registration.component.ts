@@ -8,7 +8,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
     styleUrls: ['app/login/login.component.css']
 })
 
-export class 	 {
+export class 	RegistrationComponent {
   registrationForm: FormGroup;
   pageTitle: string = 'Registration';
   submitted: boolean = false;

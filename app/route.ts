@@ -9,7 +9,7 @@ import { DesertComponent } from './recipes/desert-recipes.component';
 import { EntreeComponent } from './recipes/entree-recipes.component';
 import { SelectedRecipeComponent } from './recipes/selected-recipe.component';
 import { RecipeListComponent } from './recipes-home/recipe-list.component';
-import { RecipeFilterComponent } from './recipes/recipe-filter.pipe';
+import { RecipeFilterPipe } from './filters/recipe-filter.pipe';
 
 const routes: Routes = [
 	{ path: 'welcome', component: WelcomeComponent },

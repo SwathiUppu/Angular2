@@ -9,15 +9,17 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 const core_1 = require('@angular/core');
-let TestDirective = class TestDirective {
-    constructor(el, renderer) {
-        renderer.setElementStyle(el.nativeElement, 'background', 'yellow');
+let RecipeFilterPipe = class RecipeFilterPipe {
+    transform(value, filterBy) {
+        filterBy = filterBy ? filterBy.toLocaleLowerCase() : null;
+        return filterBy ? value.filter((product) => product.recipe_name.toLocaleLowerCase().indexOf(filterBy) !== -1) : value;
     }
 };
-TestDirective = __decorate([
-    core_1.Directive({ selector: 'testDirective'
+RecipeFilterPipe = __decorate([
+    core_1.Pipe({
+        name: 'searchFilter'
     }), 
-    __metadata('design:paramtypes', [core_1.ElementRef, core_1.Renderer])
-], TestDirective);
-exports.TestDirective = TestDirective;
-//# sourceMappingURL=test.directive.js.map
+    __metadata('design:paramtypes', [])
+], RecipeFilterPipe);
+exports.RecipeFilterPipe = RecipeFilterPipe;
+//# sourceMappingURL=recipe-filter.pipe.js.map

@@ -1,3 +1,17 @@
+/*import {  PipeTransform, Pipe } from '@angular/core';
+import { IProduct } from './product';
+
+@Pipe({
+    name: 'productFilter'
+})
+export class ProductFilterPipe implements PipeTransform {
+
+    transform(value: IProduct[], filterBy: string): IProduct[] {
+        filterBy = filterBy ? filterBy.toLocaleLowerCase() : null;
+        return filterBy ? value.filter((product: IProduct) =>
+            product.productName.toLocaleLowerCase().indexOf(filterBy) !== -1) : value;
+    }
+}*/
 "use strict";
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -9,15 +23,12 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 const core_1 = require('@angular/core');
+//import { IProduct } from './product';
 let ProductFilterPipe = class ProductFilterPipe {
-    transform(value, filterBy) {
-        filterBy = filterBy ? filterBy.toLocaleLowerCase() : null;
-        return filterBy ? value.filter((product) => product.productName.toLocaleLowerCase().indexOf(filterBy) !== -1) : value;
-    }
 };
 ProductFilterPipe = __decorate([
     core_1.Pipe({
-        name: 'productFilter'
+        name: 'recipeFilter'
     }), 
     __metadata('design:paramtypes', [])
 ], ProductFilterPipe);
