@@ -11,7 +11,7 @@ export class RecipeService {
   constructor(private _http: Http) {}
 	
   getRecipes(recipeType: string): Observable<any []>  {
-    this._recipeUrl = 'api/products/' + recipeType +'.json';
+    this._recipeUrl = 'api/courses/' + recipeType +'.json';
     return this._http.get(this._recipeUrl)
                .map((res:Response) => res.json())
                .do(data => console.log(JSON.stringify(data)))

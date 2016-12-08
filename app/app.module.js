@@ -18,7 +18,7 @@ const login_component_1 = require('./login/login.component');
 const registration_component_1 = require('./login/registration.component');
 const recipe_home_component_1 = require('./recipes-home/recipe-home.component');
 const appetizer_recipes_component_1 = require('./recipes/appetizer-recipes.component');
-const desert_recipes_component_1 = require('./recipes/desert-recipes.component');
+const dessert_recipes_component_1 = require('./recipes/dessert-recipes.component');
 const entree_recipes_component_1 = require('./recipes/entree-recipes.component');
 const selected_recipe_component_1 = require('./recipes/selected-recipe.component');
 const recipe_list_component_1 = require('./recipes-home/recipe-list.component');
@@ -31,7 +31,7 @@ let AppModule = class AppModule {
 AppModule = __decorate([
     core_1.NgModule({
         imports: [platform_browser_1.BrowserModule, forms_1.FormsModule, http_1.HttpModule, forms_1.ReactiveFormsModule, route_1.AppRoutingModule],
-        declarations: [app_component_1.AppComponent, welcome_component_1.WelcomeComponent, login_component_1.LoginComponent, registration_component_1.RegistrationComponent, recipe_home_component_1.RecipeComponent, carousel_1.CarouselComponent, recipe_list_component_1.RecipeListComponent, appetizer_recipes_component_1.AppetizerComponent, entree_recipes_component_1.EntreeComponent, desert_recipes_component_1.DesertComponent, selected_recipe_component_1.SelectedRecipeComponent, recipe_filter_pipe_1.RecipeFilterPipe],
+        declarations: [app_component_1.AppComponent, welcome_component_1.WelcomeComponent, login_component_1.LoginComponent, registration_component_1.RegistrationComponent, recipe_home_component_1.RecipeComponent, carousel_1.CarouselComponent, recipe_list_component_1.RecipeListComponent, appetizer_recipes_component_1.AppetizerComponent, entree_recipes_component_1.EntreeComponent, dessert_recipes_component_1.DessertComponent, selected_recipe_component_1.SelectedRecipeComponent, recipe_filter_pipe_1.RecipeFilterPipe],
         providers: [recipe_services_1.RecipeService],
         bootstrap: [app_component_1.AppComponent]
     }), 

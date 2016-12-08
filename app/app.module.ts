@@ -8,7 +8,7 @@ import { LoginComponent } from './login/login.component';
 import { RegistrationComponent } from './login/registration.component';
 import { RecipeComponent } from './recipes-home/recipe-home.component';
 import { AppetizerComponent } from './recipes/appetizer-recipes.component';
-import { DesertComponent } from './recipes/desert-recipes.component';
+import { DessertComponent } from './recipes/dessert-recipes.component';
 import { EntreeComponent } from './recipes/entree-recipes.component';
 import { SelectedRecipeComponent } from './recipes/selected-recipe.component';
 import { RecipeListComponent } from './recipes-home/recipe-list.component';
@@ -20,7 +20,7 @@ import { RecipeFilterPipe } from './filters/recipe-filter.pipe';
 
 @NgModule({
   imports: [ BrowserModule, FormsModule, HttpModule, ReactiveFormsModule, AppRoutingModule ],
-  declarations: [ AppComponent, WelcomeComponent, LoginComponent, RegistrationComponent, RecipeComponent, CarouselComponent, RecipeListComponent, AppetizerComponent, EntreeComponent, DesertComponent, SelectedRecipeComponent, RecipeFilterPipe ],
+  declarations: [ AppComponent, WelcomeComponent, LoginComponent, RegistrationComponent, RecipeComponent, CarouselComponent, RecipeListComponent, AppetizerComponent, EntreeComponent, DessertComponent, SelectedRecipeComponent, RecipeFilterPipe ],
 	providers: [  RecipeService ],
   bootstrap: [ AppComponent ]
 })

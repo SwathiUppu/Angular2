@@ -19,7 +19,7 @@ let RecipeService = class RecipeService {
         this._http = _http;
     }
     getRecipes(recipeType) {
-        this._recipeUrl = 'api/products/' + recipeType + '.json';
+        this._recipeUrl = 'api/courses/' + recipeType + '.json';
         return this._http.get(this._recipeUrl)
             .map((res) => res.json())
             .do(data => console.log(JSON.stringify(data)))

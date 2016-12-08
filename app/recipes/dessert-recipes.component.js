@@ -10,21 +10,21 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 const core_1 = require('@angular/core');
 const recipe_services_1 = require('../services/recipe-services');
-let DesertComponent = class DesertComponent {
+let DessertComponent = class DessertComponent {
     constructor(_recipeService) {
         this._recipeService = _recipeService;
     }
     ngOnInit() {
-        this._recipeService.getRecipes('deserts')
+        this._recipeService.getRecipes('desserts')
             .subscribe(data => this.recipes = data);
     }
 };
-DesertComponent = __decorate([
+DessertComponent = __decorate([
     core_1.Component({
-        templateUrl: 'app/recipes/desert-recipes.component.html',
+        templateUrl: 'app/recipes/dessert-recipes.component.html',
         styleUrls: ['app/recipes/recipes.css']
     }), 
     __metadata('design:paramtypes', [recipe_services_1.RecipeService])
-], DesertComponent);
-exports.DesertComponent = DesertComponent;
-//# sourceMappingURL=desert-recipes.component.js.map
+], DessertComponent);
+exports.DessertComponent = DessertComponent;
+//# sourceMappingURL=dessert-recipes.component.js.map

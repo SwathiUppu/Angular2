@@ -15,7 +15,7 @@ const login_component_1 = require('./login/login.component');
 const registration_component_1 = require('./login/registration.component');
 const recipe_home_component_1 = require('./recipes-home/recipe-home.component');
 const appetizer_recipes_component_1 = require('./recipes/appetizer-recipes.component');
-const desert_recipes_component_1 = require('./recipes/desert-recipes.component');
+const dessert_recipes_component_1 = require('./recipes/dessert-recipes.component');
 const entree_recipes_component_1 = require('./recipes/entree-recipes.component');
 const selected_recipe_component_1 = require('./recipes/selected-recipe.component');
 const recipe_list_component_1 = require('./recipes-home/recipe-list.component');
@@ -26,7 +26,7 @@ const routes = [
     { path: 'recipes-home', component: recipe_home_component_1.RecipeComponent },
     { path: 'recipeList', component: recipe_list_component_1.RecipeListComponent },
     { path: 'appetizer', component: appetizer_recipes_component_1.AppetizerComponent },
-    { path: 'desert', component: desert_recipes_component_1.DesertComponent },
+    { path: 'dessert', component: dessert_recipes_component_1.DessertComponent },
     { path: 'entree', component: entree_recipes_component_1.EntreeComponent },
     { path: 'selectedRecipe/:recipeType/:recipeName', component: selected_recipe_component_1.SelectedRecipeComponent },
     { path: '', redirectTo: 'welcome', pathMatch: 'full' },
