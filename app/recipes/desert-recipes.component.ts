@@ -2,7 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { RecipeService } from '../services/recipe-services';
 
 @Component({
-  templateUrl: 'app/recipes/desert-recipes.component.html'
+  templateUrl: 'app/recipes/desert-recipes.component.html',
+	styleUrls: ['app/recipes/recipes.css']
 })
 
 export class DesertComponent implements OnInit {
