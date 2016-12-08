@@ -15,12 +15,13 @@ import { RecipeListComponent } from './recipes-home/recipe-list.component';
 import { RecipeService }  from './services/recipe-services';
 import { RouterModule } from '@angular/router';
 import { CarouselComponent } from './shared/carousel';
+import { CourseDetails } from './shared/course-details'
 import { AppRoutingModule } from './route';
 import { RecipeFilterPipe } from './filters/recipe-filter.pipe';
 
 @NgModule({
   imports: [ BrowserModule, FormsModule, HttpModule, ReactiveFormsModule, AppRoutingModule ],
-  declarations: [ AppComponent, WelcomeComponent, LoginComponent, RegistrationComponent, RecipeComponent, CarouselComponent, RecipeListComponent, AppetizerComponent, EntreeComponent, DessertComponent, SelectedRecipeComponent, RecipeFilterPipe ],
+  declarations: [ AppComponent, WelcomeComponent, LoginComponent, RegistrationComponent, RecipeComponent, CarouselComponent, CourseDetails, RecipeListComponent, AppetizerComponent, EntreeComponent, DessertComponent, SelectedRecipeComponent, RecipeFilterPipe ],
 	providers: [  RecipeService ],
   bootstrap: [ AppComponent ]
 })

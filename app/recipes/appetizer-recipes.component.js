@@ -10,9 +10,11 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 const core_1 = require('@angular/core');
 const recipe_services_1 = require('../services/recipe-services');
+const course_details_1 = require('../shared/course-details');
 let AppetizerComponent = class AppetizerComponent {
     constructor(_recipeService) {
         this._recipeService = _recipeService;
+        this.appetizer = "appetizers";
     }
     ngOnInit() {
         this._recipeService.getRecipes('appetizers')
@@ -22,7 +24,8 @@ let AppetizerComponent = class AppetizerComponent {
 AppetizerComponent = __decorate([
     core_1.Component({
         templateUrl: 'app/recipes/appetizer-recipes.component.html',
-        styleUrls: ['app/css/courses.css', 'app/css/common.css']
+        styleUrls: ['app/css/courses.css', 'app/css/common.css'],
+        directives: [course_details_1.CourseDetails]
     }), 
     __metadata('design:paramtypes', [recipe_services_1.RecipeService])
 ], AppetizerComponent);

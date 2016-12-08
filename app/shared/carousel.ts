@@ -8,5 +8,11 @@ import {Http} from '@angular/http';
 })
 
 export class CarouselComponent {
-   
+	 public counterValue = 0;
+  increment() {
+    this.counterValue++;
+  }
+  decrement() {
+    this.counterValue--;
+  }
 }

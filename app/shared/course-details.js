@@ -9,24 +9,19 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 const core_1 = require('@angular/core');
-let CarouselComponent = class CarouselComponent {
-    constructor() {
-        this.counterValue = 0;
-    }
-    increment() {
-        this.counterValue++;
-    }
-    decrement() {
-        this.counterValue--;
+const recipe_services_1 = require('../services/recipe-services');
+let CourseDetails = class CourseDetails {
+    constructor(_recipeService) {
+        this._recipeService = _recipeService;
     }
 };
-CarouselComponent = __decorate([
+CourseDetails = __decorate([
     core_1.Component({
-        selector: "carousel",
-        templateUrl: 'app/shared/carousel.html',
-        styleUrls: ['app/css/carousel.css']
+        selector: "course-details",
+        templateUrl: 'app/shared/course-details.html',
+        inputs: ['counterValue:test']
     }), 
-    __metadata('design:paramtypes', [])
-], CarouselComponent);
-exports.CarouselComponent = CarouselComponent;
-//# sourceMappingURL=carousel.js.map
+    __metadata('design:paramtypes', [recipe_services_1.RecipeService])
+], CourseDetails);
+exports.CourseDetails = CourseDetails;
+//# sourceMappingURL=course-details.js.map
