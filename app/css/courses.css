@@ -17,4 +17,9 @@
 .display-header {
 	margin-top:20px;
 }
+.empty_filter {
+	 font-size: 1.5em;
+   color: grey;
+   text-align: center;
+}
 

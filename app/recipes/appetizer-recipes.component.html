@@ -7,6 +7,7 @@
 	  <input type="text" class="form-control input-type" [(ngModel)]='vegAppetizerFilter' placeholder="Search for veg appetizers"/>
 	  <hr style="clear:both;"/>
 	</div>
+	<div class="empty_filter" [hidden]="(recipes.vegetarian | searchFilter:vegAppetizerFilter).length">No results found for {{vegAppetizerFilter}}!</div>
   <div class="col-sm-6 col-md-3" *ngFor="let vegAppetizers of recipes.vegetarian | searchFilter : vegAppetizerFilter">
     <div class="thumbnail" style="height: 228px;">
 		  <a [routerLink]="['/selectedRecipe', 'appetizer', vegAppetizers.recipe_alias]">
@@ -26,6 +27,7 @@
 	  <input type="text" class="form-control input-type" [(ngModel)]='nonvegAppetizerFilter' placeholder="Search for non veg appetizers"/>
 	  <hr style="clear:both;"/>
 	</div>
+	<div class="empty_filter" [hidden]="(recipes.nonvegetarian | searchFilter:nonvegAppetizerFilter).length">No results found for {{nonvegAppetizerFilter}}!</div>
   <div class="col-sm-6 col-md-3" *ngFor="let nonvegAppetizers of recipes.nonvegetarian  | searchFilter : nonvegAppetizerFilter">
     <div class="thumbnail" style="height: 228px;">
 	    <a [routerLink]="['/selectedRecipe', 'appetizer', nonvegAppetizers.recipe_alias]">
