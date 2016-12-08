@@ -1,11 +1,11 @@
 import { Component } from '@angular/core';
-import { Users } from './users'
+import { Users } from '../data/users'
 import { ActivatedRoute, Router } from '@angular/router';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 @Component({
     templateUrl: 'app/login/registration.component.html',
-    styleUrls: ['app/login/login.component.css']
+    styleUrls: ['app/css/login-registration.css']
 })
 
 export class 	RegistrationComponent {
@@ -39,8 +39,6 @@ export class 	RegistrationComponent {
       this._router.navigate(['/login'],{ queryParams: { registered:'true'}})
     }
   }
-
-
 }
 
 

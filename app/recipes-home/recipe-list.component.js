@@ -9,13 +9,26 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 const core_1 = require('@angular/core');
+const recipe_services_1 = require('../services/recipe-services');
 let RecipeListComponent = class RecipeListComponent {
+    constructor(_recipeService) {
+        this._recipeService = _recipeService;
+        this.countTitles = {};
+    }
+    setCountData(data) {
+        this.recipeCount = data;
+        this.countTitles.appetizers = data.appetizers.vegetarian + ' veg appetizers ' + data.appetizers.vegetarian + ' non veg appetizers';
+    }
+    ngOnInit() {
+        this._recipeService.getRecipesCount()
+            .subscribe(data => this.setCountData(data));
+    }
 };
 RecipeListComponent = __decorate([
     core_1.Component({
         templateUrl: 'app/recipes-home/recipe-list.component.html'
     }), 
-    __metadata('design:paramtypes', [])
+    __metadata('design:paramtypes', [recipe_services_1.RecipeService])
 ], RecipeListComponent);
 exports.RecipeListComponent = RecipeListComponent;
 //# sourceMappingURL=recipe-list.component.js.map

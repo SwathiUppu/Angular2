@@ -12,7 +12,7 @@ const core_1 = require('@angular/core');
 let RecipeFilterPipe = class RecipeFilterPipe {
     transform(value, filterBy) {
         filterBy = filterBy ? filterBy.toLocaleLowerCase() : null;
-        return filterBy ? value.filter((product) => product.recipe_name.toLocaleLowerCase().indexOf(filterBy) !== -1) : value;
+        return filterBy ? value.filter((recipeFilter) => recipeFilter.recipe_name.toLocaleLowerCase().indexOf(filterBy) !== -1) : value;
     }
 };
 RecipeFilterPipe = __decorate([

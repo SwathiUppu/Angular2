@@ -3,7 +3,7 @@ import { RecipeService } from '../services/recipe-services';
 
 @Component({
   templateUrl: 'app/recipes/dessert-recipes.component.html',
-	styleUrls: ['app/recipes/recipes.css']
+	styleUrls: ['app/css/courses.css', 'app/css/common.css']
 })
 
 export class DessertComponent implements OnInit {

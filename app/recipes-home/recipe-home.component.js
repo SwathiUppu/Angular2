@@ -14,7 +14,7 @@ let RecipeComponent = class RecipeComponent {
 RecipeComponent = __decorate([
     core_1.Component({
         templateUrl: 'app/recipes-home/recipe-home.component.html',
-        styleUrls: ['app/recipes-home/recipe-home.component.css']
+        styleUrls: ['app/css/common.css']
     }), 
     __metadata('design:paramtypes', [])
 ], RecipeComponent);

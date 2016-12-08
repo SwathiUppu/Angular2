@@ -30,7 +30,7 @@ let SelectedRecipeComponent = class SelectedRecipeComponent {
 SelectedRecipeComponent = __decorate([
     core_1.Component({
         templateUrl: 'app/recipes/selected-recipe.component.html',
-        styleUrls: ['app/recipes/recipes.css']
+        styleUrls: ['app/css/courses.css', 'app/css/common.css']
     }), 
     __metadata('design:paramtypes', [router_1.ActivatedRoute, router_1.Router, recipe_services_1.RecipeService])
 ], SelectedRecipeComponent);

@@ -4,7 +4,7 @@ import { RecipeService } from '../services/recipe-services';
 @Component({
   templateUrl: 'app/recipes/entree-recipes.component.html',
 	 providers: [{ provide: Window, useValue: window }],
-	 styleUrls: ['app/recipes/recipes.css']
+	 styleUrls: ['app/css/courses.css', 'app/css/common.css']
 })
 
 export class EntreeComponent implements OnInit {

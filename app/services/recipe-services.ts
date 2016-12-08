@@ -25,6 +25,13 @@ export class RecipeService {
 							 .do(data => console.log(JSON.stringify(data)))
 							 .catch(this.errorHandler);
 	}
+	
+	getRecipesCount(): Observable<any []> {
+		this._recipeUrl = 'api/courses/count.json';
+		return this._http.get(this._recipeUrl)
+		           .map((res: Response) => res.json())
+							 .catch(this.errorHandler)
+	}
 
   private errorHandler(error: Response) {
     return Observable.throw(error.json().error || 'Server Error');

@@ -9,5 +9,4 @@ export class TestDirective {
 	constructor(el: ElementRef, renderer: Renderer){
 		renderer.setElementStyle(el.nativeElement, 'background', 'yellow');
 	}
-	
 }

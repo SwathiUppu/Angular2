@@ -15,7 +15,7 @@ CarouselComponent = __decorate([
     core_1.Component({
         selector: "carousel",
         templateUrl: 'app/shared/carousel.html',
-        styleUrls: ['app/shared/carousel.css']
+        styleUrls: ['app/css/carousel.css']
     }), 
     __metadata('design:paramtypes', [])
 ], CarouselComponent);

@@ -1,8 +1,5 @@
-.float-left {
-	float:left;
-}
-.float-right {
-	float:right;
+.display-inline {
+	display:inline;
 }
 .text-align-left {
 	text-align: left;
@@ -13,4 +10,3 @@
 .text-align-center {
 	text-align: center;
 }
-	

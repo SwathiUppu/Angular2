@@ -47,7 +47,7 @@ let RegistrationComponent = class RegistrationComponent {
 RegistrationComponent = __decorate([
     core_1.Component({
         templateUrl: 'app/login/registration.component.html',
-        styleUrls: ['app/login/login.component.css']
+        styleUrls: ['app/css/login-registration.css']
     }), 
     __metadata('design:paramtypes', [router_1.ActivatedRoute, router_1.Router, forms_1.FormBuilder])
 ], RegistrationComponent);

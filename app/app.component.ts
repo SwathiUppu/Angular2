@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { ProductService } from './products/product.service';
 import { RecipeService } from './services/recipe-services';
 
 @Component({
@@ -12,7 +11,7 @@ import { RecipeService } from './services/recipe-services';
 							<div class="container">
 							  <router-outlet></router-outlet>
 							</div>`,
-	providers: [ ProductService, RecipeService ]
+	providers: [ RecipeService ]
 	
 })
 

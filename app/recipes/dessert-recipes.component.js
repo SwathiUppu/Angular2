@@ -22,7 +22,7 @@ let DessertComponent = class DessertComponent {
 DessertComponent = __decorate([
     core_1.Component({
         templateUrl: 'app/recipes/dessert-recipes.component.html',
-        styleUrls: ['app/recipes/recipes.css']
+        styleUrls: ['app/css/courses.css', 'app/css/common.css']
     }), 
     __metadata('design:paramtypes', [recipe_services_1.RecipeService])
 ], DessertComponent);

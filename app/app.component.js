@@ -9,7 +9,6 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 const core_1 = require('@angular/core');
-const product_service_1 = require('./products/product.service');
 const recipe_services_1 = require('./services/recipe-services');
 let AppComponent = class AppComponent {
     constructor() {
@@ -27,7 +26,7 @@ AppComponent = __decorate([
 							<div class="container">
 							  <router-outlet></router-outlet>
 							</div>`,
-        providers: [product_service_1.ProductService, recipe_services_1.RecipeService]
+        providers: [recipe_services_1.RecipeService]
     }), 
     __metadata('design:paramtypes', [])
 ], AppComponent);
