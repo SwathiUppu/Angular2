@@ -14,12 +14,17 @@ let CourseDetails = class CourseDetails {
     constructor(_recipeService) {
         this._recipeService = _recipeService;
     }
+    ngOnInit() {
+        this._recipeService.getRecipes(this.recipe)
+            .subscribe(data => this.recipes = data);
+    }
 };
 CourseDetails = __decorate([
     core_1.Component({
         selector: "course-details",
         templateUrl: 'app/shared/course-details.html',
-        inputs: ['counterValue:test']
+        styleUrls: ['app/css/courses.css', 'app/css/common.css'],
+        inputs: ['recipe:recipeType']
     }), 
     __metadata('design:paramtypes', [recipe_services_1.RecipeService])
 ], CourseDetails);

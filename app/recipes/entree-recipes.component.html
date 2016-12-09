@@ -1,48 +1,4 @@
-<div>
-<button class="btn btn-primary" [routerLink]="['/recipeList']">Back to the courses</button>
-</div>
-<div class="row" *ngIf="recipes && recipes.vegetarian">
- <div class="display-header">
-	  <h3 class="display-inline">Vegetarian</h3>
-	  <input type="text" class="form-control input-type" [(ngModel)]='vegEntreeFilter' placeholder="Search for veg entrées"/>
-	  <hr style="clear:both;"/>
-	</div>
-	<div class="empty_filter" [hidden]="(recipes.vegetarian | searchFilter:vegEntreeFilter).length">No results found for {{vegEntreeFilter}}!</div>
-  <div class="col-sm-6 col-md-3" *ngFor="let vegEntree of recipes.vegetarian | searchFilter : vegEntreeFilter">
-    <div class="thumbnail" style="height: 228px;">
-      <a [routerLink]="['/selectedRecipe', 'entree', vegEntree.recipe_alias]">
-			<img style="height: 144px;width: 241px;" src="{{vegEntree.image}}" alt="...">
-      <div class="caption">
-        <h4>{{vegEntree.recipe_name}}</h4>
-      </div>
-			</a>
-    </div>
-  </div>
-	
-	
-
-</div>
-
-
-<div class="row" *ngIf="recipes && recipes.nonvegetarian">
-  <div class="display-header">
-	  <h3 class="display-inline">Non Vegetarian</h3>
-	  <input type="text" class="form-control input-type" [(ngModel)]='nonvegEntreeFilter' placeholder="Search for non veg entrées"/>
-	  <hr style="clear:both;"/>
-	</div>
-	<div class="empty_filter" [hidden]="(recipes.nonvegetarian | searchFilter:nonvegEntreeFilter).length">No results found for {{nonvegEntreeFilter}}!</div>
-  <div class="col-sm-6 col-md-3" *ngFor="let nonvegEntree of recipes.nonvegetarian | searchFilter : nonvegEntreeFilter">
-    <div class="thumbnail" style="height: 228px;">
-		<a [routerLink]="['/selectedRecipe', 'entree', nonvegEntree.recipe_alias]">
-      <img style="height: 144px;width: 241px;" src="{{nonvegEntree.image}}" alt="...">
-      <div class="caption">
-        <h4>{{nonvegEntree.recipe_name}}</h4>
-      </div>
-			</a>
-    </div>
-  </div>
-
-</div>
+<course-details [recipeType]="recipeType"></course-details>
 
 
 <div>

@@ -14,6 +14,7 @@ let EntreeComponent = class EntreeComponent {
     constructor(_recipeService, _window) {
         this._recipeService = _recipeService;
         this._window = _window;
+        this.recipeType = 'entree';
         console.log(this._window);
     }
     gototop() {

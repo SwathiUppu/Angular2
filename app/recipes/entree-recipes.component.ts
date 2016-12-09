@@ -9,6 +9,7 @@ import { RecipeService } from '../services/recipe-services';
 
 export class EntreeComponent implements OnInit {
   recipes: any[];
+  recipeType: string = 'entree';
   constructor(private _recipeService: RecipeService, private _window: Window) {
 		console.log(this._window);
 		

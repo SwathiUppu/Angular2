@@ -10,7 +10,7 @@ import {CourseDetails} from '../shared/course-details';
 
 export class AppetizerComponent implements OnInit {
   recipes: any[];
-	appetizer = "appetizers";
+	recipeType = "appetizers";
   constructor(private _recipeService: RecipeService) {}
 
   ngOnInit(): void {

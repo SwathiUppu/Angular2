@@ -14,7 +14,7 @@ const course_details_1 = require('../shared/course-details');
 let AppetizerComponent = class AppetizerComponent {
     constructor(_recipeService) {
         this._recipeService = _recipeService;
-        this.appetizer = "appetizers";
+        this.recipeType = "appetizers";
     }
     ngOnInit() {
         this._recipeService.getRecipes('appetizers')

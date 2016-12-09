@@ -13,6 +13,7 @@ const recipe_services_1 = require('../services/recipe-services');
 let DessertComponent = class DessertComponent {
     constructor(_recipeService) {
         this._recipeService = _recipeService;
+        this.recipeType = 'desserts';
     }
     ngOnInit() {
         this._recipeService.getRecipes('desserts')

@@ -8,6 +8,7 @@ import { RecipeService } from '../services/recipe-services';
 
 export class DessertComponent implements OnInit {
   recipes: any[];
+  recipeType: string = 'desserts';
   constructor(private _recipeService: RecipeService) {}
 
   ngOnInit(): void {
