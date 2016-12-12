@@ -20,10 +20,6 @@ let EntreeComponent = class EntreeComponent {
     gototop() {
         this._window.scrollTo(0, 0);
     }
-    ngOnInit() {
-        this._recipeService.getRecipes('entree')
-            .subscribe(data => this.recipes = data);
-    }
 };
 EntreeComponent = __decorate([
     core_1.Component({

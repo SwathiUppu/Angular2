@@ -18,6 +18,12 @@ let RecipeService = class RecipeService {
     constructor(_http) {
         this._http = _http;
     }
+    getCarouselImages() {
+        this._recipeUrl = 'api/courses/carousel.json';
+        return this._http.get(this._recipeUrl)
+            .map((res) => res.json())
+            .catch(this.errorHandler);
+    }
     getRecipes(recipeType) {
         this._recipeUrl = 'api/courses/' + recipeType + '.json';
         return this._http.get(this._recipeUrl)

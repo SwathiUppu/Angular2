@@ -9,7 +9,15 @@ import 'rxjs/add/operator/catch';
 export class RecipeService {
 	private _recipeUrl: string;
   constructor(private _http: Http) {}
-	
+		
+  getCarouselImages(): Observable<any []> {
+    this._recipeUrl = 'api/courses/carousel.json';
+    return this._http.get(this._recipeUrl)
+               .map((res: Response) => res.json())
+               .catch(this.errorHandler);
+  }
+
+
   getRecipes(recipeType: string): Observable<any []>  {
     this._recipeUrl = 'api/courses/' + recipeType +'.json';
     return this._http.get(this._recipeUrl)

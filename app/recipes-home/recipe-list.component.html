@@ -6,13 +6,13 @@
     </li>
 	</a>
 	<a [routerLink]="['/entree']">
-	  <li class="list-group-item">
+	  <li class="list-group-item" [title]="countTitles.entrees">
       <span class="badge" *ngIf="recipeCount && recipeCount.entrees">{{ recipeCount.entrees.vegetarian + recipeCount.entrees.nonvegetarian }}</span>
 		  <p>Entree</p>
     </li>
 	</a>
 	<a [routerLink]="['/dessert']">
-	  <li class="list-group-item">
+	  <li class="list-group-item" [title]="countTitles.desserts">
       <span class="badge" *ngIf="recipeCount && recipeCount.desserts">{{ recipeCount.desserts.vegetarian + recipeCount.desserts.nonvegetarian }}</span>
       <p>Deserts</p>
     </li>

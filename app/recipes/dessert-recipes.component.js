@@ -15,10 +15,6 @@ let DessertComponent = class DessertComponent {
         this._recipeService = _recipeService;
         this.recipeType = 'desserts';
     }
-    ngOnInit() {
-        this._recipeService.getRecipes('desserts')
-            .subscribe(data => this.recipes = data);
-    }
 };
 DessertComponent = __decorate([
     core_1.Component({

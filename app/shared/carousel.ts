@@ -1,5 +1,5 @@
-import {Component} from '@angular/core';
-import {Http} from '@angular/http';
+import { Component, OnInit } from '@angular/core';
+import { RecipeService } from '../services/recipe-services';
 
 @Component({
     selector: "carousel",
@@ -7,12 +7,14 @@ import {Http} from '@angular/http';
 		styleUrls: ['app/css/carousel.css']
 })
 
-export class CarouselComponent {
-	 public counterValue = 0;
-  increment() {
-    this.counterValue++;
+export class CarouselComponent implements OnInit {
+  carouselImages: any[];
+  check: string;
+  constructor(private _recipeService: RecipeService) {}
+  ngOnInit(): void {
+    this.check = 'active';
+    this._recipeService.getCarouselImages()
+		    .subscribe(data => this.carouselImages = data);
   }
-  decrement() {
-    this.counterValue--;
-  }
+	
 }
