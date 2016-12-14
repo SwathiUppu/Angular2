@@ -5,7 +5,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 @Component({
     templateUrl: 'app/login/registration.component.html',
-    styleUrls: ['app/css/login-registration.css']
+    styleUrls: ['app/css/common.css', 'app/css/login-registration.css']
 })
 
 export class 	RegistrationComponent {
