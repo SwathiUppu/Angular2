@@ -11,11 +11,13 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 const core_1 = require('@angular/core');
 const router_1 = require('@angular/router');
 const forms_1 = require('@angular/forms');
+const recipe_services_1 = require('../services/recipe-services');
 let RegistrationComponent = class RegistrationComponent {
-    constructor(_route, _router, fb) {
+    constructor(_route, _router, fb, _recipeService) {
         this._route = _route;
         this._router = _router;
         this.fb = fb;
+        this._recipeService = _recipeService;
         this.pageTitle = 'Registration';
         this.submitted = false;
         this.model = {};
@@ -26,8 +28,13 @@ let RegistrationComponent = class RegistrationComponent {
             'gender': [null, forms_1.Validators.required],
             'email': [null, forms_1.Validators.compose([forms_1.Validators.required, forms_1.Validators.pattern('^[a-zA-Z0-9.!#$%&amp;’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$')])],
             'username': [null, forms_1.Validators.required],
-            'password': [null, forms_1.Validators.required]
+            'password': [null, forms_1.Validators.required],
+            'country': [null, forms_1.Validators.required]
         });
+    }
+    ngOnInit() {
+        this._recipeService.getCountries()
+            .subscribe(data => this.countries = data);
     }
     changeUsername(value, modelname) {
         if (value && value.length > 0) {
@@ -47,9 +54,9 @@ let RegistrationComponent = class RegistrationComponent {
 RegistrationComponent = __decorate([
     core_1.Component({
         templateUrl: 'app/login/registration.component.html',
-        styleUrls: ['app/css/login-registration.css']
+        styleUrls: ['app/css/common.css', 'app/css/login-registration.css']
     }), 
-    __metadata('design:paramtypes', [router_1.ActivatedRoute, router_1.Router, forms_1.FormBuilder])
+    __metadata('design:paramtypes', [router_1.ActivatedRoute, router_1.Router, forms_1.FormBuilder, recipe_services_1.RecipeService])
 ], RegistrationComponent);
 exports.RegistrationComponent = RegistrationComponent;
 //# sourceMappingURL=registration.component.js.map

@@ -40,6 +40,13 @@ export class RecipeService {
 		           .map((res: Response) => res.json())
 							 .catch(this.errorHandler)
 	}
+	
+	getCountries(): Observable<any []> {
+		this._recipeUrl = 'api/courses/countries.json';
+		return this._http.get(this._recipeUrl)
+		           .map((res: Response) => res.json())
+							 .catch(this.errorHandler)
+	}
 
   private errorHandler(error: Response) {
     return Observable.throw(error.json().error || 'Server Error');
