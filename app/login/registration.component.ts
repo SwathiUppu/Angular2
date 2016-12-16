@@ -24,6 +24,7 @@ export class 	RegistrationComponent implements OnInit {
       'email': [null, Validators.compose([ Validators.required, Validators.pattern('^[a-zA-Z0-9.!#$%&amp;’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$')])],
       'username': [null, Validators.required],
       'password': [null, Validators.required],
+			'confirmPassword': [null,Validators.required],
 			'country': [null, Validators.required]
     })
   }
@@ -43,7 +44,7 @@ export class 	RegistrationComponent implements OnInit {
 
   registrationSubmit(isValid:boolean): void {
     this.submitted = true;
-    if(isValid) {
+    if(isValid && (this.model.password === this.model.confirmPassword)) {
       this._router.navigate(['/login'],{ queryParams: { registered:'true'}})
     }
   }

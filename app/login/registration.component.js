@@ -29,6 +29,7 @@ let RegistrationComponent = class RegistrationComponent {
             'email': [null, forms_1.Validators.compose([forms_1.Validators.required, forms_1.Validators.pattern('^[a-zA-Z0-9.!#$%&amp;’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$')])],
             'username': [null, forms_1.Validators.required],
             'password': [null, forms_1.Validators.required],
+            'confirmPassword': [null, forms_1.Validators.required],
             'country': [null, forms_1.Validators.required]
         });
     }
@@ -46,7 +47,7 @@ let RegistrationComponent = class RegistrationComponent {
     }
     registrationSubmit(isValid) {
         this.submitted = true;
-        if (isValid) {
+        if (isValid && (this.model.password === this.model.confirmPassword)) {
             this._router.navigate(['/login'], { queryParams: { registered: 'true' } });
         }
     }
